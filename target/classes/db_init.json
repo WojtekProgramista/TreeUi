@@ -1,0 +1,39 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "value": 7,
+      "parent": null,
+      "color": "red",
+      "type": "root"
+    },
+    {
+      "id": 2,
+      "value": 3,
+      "parent": 1,
+      "color": "green",
+      "type": "intermediate"
+    },
+    {
+      "id": 3,
+      "value": null,
+      "parent": 1,
+      "color": "blue",
+      "type": "leaf"
+    },
+    {
+      "id": 4,
+      "value": null,
+      "parent": 2,
+      "color": "yellow",
+      "type": "leaf"
+    },
+    {
+      "id": 5,
+      "value": null,
+      "parent": 2,
+      "color": "pink",
+      "type": "leaf"
+    }
+  ]
+}

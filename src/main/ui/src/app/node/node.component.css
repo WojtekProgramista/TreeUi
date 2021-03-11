@@ -1,0 +1,64 @@
+.container {
+    float: left;
+    height: 100px;
+    max-width: 9999px;
+}
+
+.content {
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    line-height: 70px;
+    margin: auto;
+    border-radius: 20px;
+}
+
+.menu_pos {
+    position: relative;
+    display: inline-block;
+    left: calc(50% + 35px);
+    top: -70px;
+}
+
+.menu {
+    display: none;
+    width: 150px;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+}
+
+.menu input {
+    width: 150px;
+    cursor: pointer;
+}
+
+.content:hover + .menu_pos > .menu {
+    display: inline-block;
+}
+
+.content:hover {
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+    cursor: pointer;
+}
+
+.menu:hover {
+    display: inline-block;
+}
+
+input:hover {
+    font-weight: bold;
+}
+
+.node_form {
+    position: absolute;
+    left: calc(50% - 200px);
+    top: 200px;
+    background-color: aquamarine;
+    width: 400px;
+    height: 250px;
+    line-height: 50px;
+    text-align: center;
+    padding: 25px;
+    outline: 1px solid black;
+}

@@ -1,0 +1,5 @@
+<div *ngFor="let layer of layeredNodes">
+    <div *ngFor="let node of layer">
+        <app-node [node]="node" [space]="spaces[node.id]" [maxId]="maxId"></app-node>
+    </div>
+</div>

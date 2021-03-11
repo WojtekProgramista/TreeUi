@@ -1,0 +1,22 @@
+<div class="container" [style.width.%]="space">
+    <div [style.background-color]="node.color" [className]="node.type == 'empty' ? 'empty' : 'content'">{{node.value}}</div>
+    <div class="menu_pos">
+        <div class="menu">
+            <input type="button" name="edit" value="EDIT NODE" (click)="displayForm('edit')"><br>
+            <input type="button" name="add" value="ADD LEAF" (click)="displayForm('add')"><br>
+            <input *ngIf="(node.type != 'root')" type="button" name="delete" value="DELETE NODE" (click)="deleteNode()">
+        </div>
+    </div>
+</div>
+
+<div class="node_form" [ngStyle]="{ display: fromDisplay }">
+    <form #form="ngForm" (ngSubmit) = onSubmit(form.value)>
+        VALUE: <input *ngIf="(node.type != 'leaf') && (action != 'add')" type="number" ngModel required name="value">
+        <span *ngIf="action == 'add'">???</span>
+        <span *ngIf="node.type == 'leaf'">{{ node.value }}</span><br>
+        COLOR: <input type="text" ngModel required name="color"><br>
+        <input type="hidden" value="{{ action }}">
+        <input type="submit" value="submit">
+    </form>
+</div>  
+  
